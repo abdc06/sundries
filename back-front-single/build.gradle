@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.2'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id 'com.github.node-gradle.node' version '3.4.0'
+}
+
+group = 'dev.mnbv'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+node {
+    version = '23.6.0'
+    npmVersion = '10.9.2'
+    download  = true
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+task buildFrontend(type: NpmTask) {
+    description = 'Build the frontend application'
+    group = 'build'
+    args = ['run', 'build']
+    workingDir = file('frontend')
+}
+
+task copyFrontendToJar(type: Copy) {
+    dependsOn buildFrontend  // Ensure the frontend build runs before this task
+
+    from 'frontend/dist'  // The actual output folder after npm run build
+    into 'src/main/resources/static'  // The Spring Boot static folder
+}
+
+processResources {
+    dependsOn copyFrontendToJar  // Ensure frontend files are copied before processing resources
+}
+
+jar {
+    dependsOn copyFrontendToJar  // Ensure frontend files are included in the JAR
+    from 'src/main/resources/static'  // Include static files in the JAR
+}
