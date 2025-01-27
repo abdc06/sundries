@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Login Success...</h1>
+    <ul>
+        <li>
+            <p th:text="${session.user['name']}"></p>
+       </li>
+        <li>
+            <p th:text="${session.user['email']}"></p>
+        </li>
+        <li>
+            <img th:src="${session.user['picture']}"/>
+        </li>
+    </ul>
+</body>
+</html>

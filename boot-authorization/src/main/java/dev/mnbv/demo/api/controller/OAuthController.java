@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class OAuthController {
-    @GetMapping("/loginForm")
-    public String home() {
-        return "/loginForm";
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
     }
 
-    @GetMapping("/private")
-    public String privatePage() {
-        return "/private";
+    @GetMapping("/dashboard")
+    public String dashboard() {
+        return "dashboard";
     }
 }

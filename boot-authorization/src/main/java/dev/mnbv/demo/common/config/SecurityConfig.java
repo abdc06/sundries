@@ -22,11 +22,11 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/private/**").authenticated()
+                        .requestMatchers("/dashboard/**").authenticated()
                         .anyRequest().permitAll())
                 .oauth2Login(oauth2LoginConfigurer -> oauth2LoginConfigurer
-                        .loginPage("/loginForm")
-                        .defaultSuccessUrl("/")
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/dashboard")
                         .userInfoEndpoint(userInfoEndpointConfig ->
                                 userInfoEndpointConfig.userService(customOAuth2UserService))
                 ).build();
