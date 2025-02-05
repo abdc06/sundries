@@ -9,11 +9,11 @@ public class OAuthController {
 
     @GetMapping("/login")
     public String login() {
-        return "login";
+        return "/login";
     }
 
     @GetMapping("/dashboard")
     public String dashboard() {
-        return "dashboard";
+        return "/dashboard";
     }
 }

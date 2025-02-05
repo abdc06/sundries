@@ -15,6 +15,9 @@ public class BootAuthorizationApplication {
         System.setProperty("NAVER_CLIENT_ID", dotenv.get("NAVER_CLIENT_ID"));
         System.setProperty("NAVER_CLIENT_SECRET", dotenv.get("NAVER_CLIENT_SECRET"));
 
+        System.setProperty("KAKAO_CLIENT_ID", dotenv.get("KAKAO_CLIENT_ID"));
+        System.setProperty("KAKAO_CLIENT_SECRET", dotenv.get("KAKAO_CLIENT_SECRET"));
+
         SpringApplication.run(BootAuthorizationApplication.class, args);
     }
 
