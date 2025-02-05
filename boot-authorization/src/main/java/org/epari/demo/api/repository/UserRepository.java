@@ -1,6 +1,6 @@
-package dev.mnbv.demo.api.repository;
+package org.epari.demo.api.repository;
 
-import dev.mnbv.demo.api.domain.User;
+import org.epari.demo.api.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

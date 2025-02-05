@@ -1,4 +1,4 @@
-package dev.mnbv.demo;
+package org.epari.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

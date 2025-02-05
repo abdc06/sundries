@@ -1,7 +1,7 @@
-package dev.mnbv.demo.common.auth.dto;
+package org.epari.demo.common.auth.dto;
 
-import dev.mnbv.demo.api.domain.User;
-import dev.mnbv.demo.common.status.Role;
+import org.epari.demo.api.domain.User;
+import org.epari.demo.common.status.Role;
 import lombok.Builder;
 import lombok.Getter;
 

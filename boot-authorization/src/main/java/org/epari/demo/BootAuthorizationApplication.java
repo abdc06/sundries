@@ -1,4 +1,4 @@
-package dev.mnbv.demo;
+package org.epari.demo;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.boot.SpringApplication;

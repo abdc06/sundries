@@ -1,9 +1,9 @@
-package dev.mnbv.demo.common.auth.service;
+package org.epari.demo.common.auth.service;
 
-import dev.mnbv.demo.api.domain.SessionUser;
-import dev.mnbv.demo.api.domain.User;
-import dev.mnbv.demo.api.repository.UserRepository;
-import dev.mnbv.demo.common.auth.dto.OAuthAttributes;
+import org.epari.demo.api.domain.SessionUser;
+import org.epari.demo.api.domain.User;
+import org.epari.demo.api.repository.UserRepository;
+import org.epari.demo.common.auth.dto.OAuthAttributes;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

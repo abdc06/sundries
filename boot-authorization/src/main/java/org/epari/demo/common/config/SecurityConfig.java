@@ -1,6 +1,6 @@
-package dev.mnbv.demo.common.config;
+package org.epari.demo.common.config;
 
-import dev.mnbv.demo.common.auth.service.CustomOAuth2UserService;
+import org.epari.demo.common.auth.service.CustomOAuth2UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package dev.mnbv.demo.api.domain;
+package org.epari.demo.api.domain;
 
 import lombok.Getter;
 

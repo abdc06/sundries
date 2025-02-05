@@ -1,6 +1,6 @@
-package dev.mnbv.demo.api.domain;
+package org.epari.demo.api.domain;
 
-import dev.mnbv.demo.common.status.Role;
+import org.epari.demo.common.status.Role;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;

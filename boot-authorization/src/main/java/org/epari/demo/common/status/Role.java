@@ -1,4 +1,4 @@
-package dev.mnbv.demo.common.status;
+package org.epari.demo.common.status;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
