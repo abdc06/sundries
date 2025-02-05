@@ -1,6 +1,5 @@
-package org.epari.demo.api.domain;
+package org.epari.demo.common.account.domain;
 
-import org.epari.demo.common.status.Role;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -9,8 +8,8 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "TB_USER_I")
-public class User {
+@Table(name = "TB_ACCOUNT_I")
+public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,14 +29,14 @@ public class User {
     private Role role;
 
     @Builder
-    public User(String name, String email, String picture, Role role) {
+    public Account(String name, String email, String picture, Role role) {
         this.name = name;
         this.email = email;
         this.picture = picture;
         this.role = role;
     }
 
-    public User update(String name, String picture) {
+    public Account update(String name, String picture) {
         this.name = name;
         this.picture = picture;
 

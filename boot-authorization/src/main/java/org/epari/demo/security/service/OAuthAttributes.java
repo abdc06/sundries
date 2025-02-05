@@ -1,9 +1,9 @@
-package org.epari.demo.common.auth.dto;
+package org.epari.demo.security.service;
 
-import org.epari.demo.api.domain.User;
-import org.epari.demo.common.status.Role;
 import lombok.Builder;
 import lombok.Getter;
+import org.epari.demo.common.account.domain.Account;
+import org.epari.demo.common.account.domain.Role;
 
 import java.util.Map;
 
@@ -74,8 +74,8 @@ public class OAuthAttributes {
                 .build();
     }
 
-    public User toEntity() {
-        return User.builder()
+    public Account toEntity() {
+        return Account.builder()
                 .name(name)
                 .email(email)
                 .picture(picture)

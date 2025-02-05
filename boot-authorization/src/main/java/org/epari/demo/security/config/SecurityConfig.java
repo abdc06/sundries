@@ -1,7 +1,7 @@
-package org.epari.demo.common.config;
+package org.epari.demo.security.config;
 
-import org.epari.demo.common.auth.service.CustomOAuth2UserService;
 import lombok.RequiredArgsConstructor;
+import org.epari.demo.security.service.CustomOAuth2UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

@@ -1,4 +1,4 @@
-package org.epari.demo.common.status;
+package org.epari.demo.common.account.domain;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
