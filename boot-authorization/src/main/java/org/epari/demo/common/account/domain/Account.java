@@ -21,6 +21,9 @@ public class Account {
     @Column(nullable = false)
     private String email;
 
+    @Column(nullable = true)
+    private String password;
+
     @Column
     private String picture;
 

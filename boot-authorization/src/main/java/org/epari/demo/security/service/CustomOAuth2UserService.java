@@ -1,5 +1,6 @@
 package org.epari.demo.security.service;
 
+import org.epari.demo.common.account.domain.PrincipalDetail;
 import org.epari.demo.common.account.repository.AccountRepository;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -35,9 +36,11 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         httpSession.setAttribute("user", user);
 
-        return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(user.getRoleKey())),
-                attributes.getAttributes(),
-                attributes.getNameAttributeKey());
+        return new PrincipalDetail(user, Collections.singleton(new SimpleGrantedAuthority(user.getRoleKey())), attributes.getAttributes());
+
+//        return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(user.getRoleKey())),
+//                attributes.getAttributes(),
+//                attributes.getNameAttributeKey());
     }
 
     private Account saveOrUpdate(OAuthAttributes attributes) {
